@@ -11,12 +11,12 @@
             <ColumnDefinition Width="57*"/>
             <ColumnDefinition Width="49*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Indítás" HorizontalAlignment="Left" Margin="50,625,0,0" VerticalAlignment="Top" Width="122" Height="45" Cursor="Hand" FontSize="18" FontFamily="Arial Black" Grid.Column="1" Click="Inditas"/>
-        <Button Content="Leállítás" HorizontalAlignment="Left" Margin="285,625,0,0" VerticalAlignment="Top" Width="122" Height="45" Cursor="Hand" FontSize="18" FontFamily="Arial Black" Grid.Column="1"/>
+        <Button x:Name="Indito" Content="Indítás" HorizontalAlignment="Left" Margin="10,625,0,0" VerticalAlignment="Top" Width="114" Height="45" Cursor="Hand" FontSize="18" FontFamily="Dubai Medium" Grid.Column="1" Click="Inditas" IsEnabled="False"/>
+        <Button x:Name="Leallit" IsEnabled="False" Content="Leállítás" HorizontalAlignment="Left" Margin="305,625,0,0" VerticalAlignment="Top" Width="114" Height="45" Cursor="Hand" FontSize="18" FontFamily="Dubai Medium" Grid.Column="1"/>
         <GroupBox Grid.Column="1" Header="Paraméterek" HorizontalAlignment="Left" Height="152" Margin="50,40,0,0" VerticalAlignment="Top" Width="346"/>
         <Label Content="Elektródák száma:" Grid.Column="1" HorizontalAlignment="Left" Margin="76,70,0,0" VerticalAlignment="Top" FontSize="14"/>
         <Label Content="Mérés típusa:" Grid.Column="1" HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <ComboBox Name="Eszam" Grid.Column="1" HorizontalAlignment="Left" Margin="240,77,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox Name="Eszam" Grid.Column="1" HorizontalAlignment="Left" Margin="240,77,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Eszam_SelectionChanged">
             <ComboBoxItem Content="4" Tag="4"/>
             <ComboBoxItem Content="8" Tag="8"/>
             <ComboBoxItem Content="16" Tag="16"/>
@@ -27,11 +27,20 @@
             <ComboBoxItem Content="512" Tag="512"/>
             <ComboBoxItem Content="1028" Tag="1028"/>
         </ComboBox>
-        <ComboBox Name="Mtipus" Grid.Column="1" HorizontalAlignment="Left" Margin="240,138,0,0" VerticalAlignment="Top" Width="120">
-            <ComboBoxItem Content="Wenner-alfa" Name="M1"/>
-            <ComboBoxItem Content="Schlumberger" Name="M2"/>
-            <ComboBoxItem Content="Dipól-axiális" Name="M3"/>
+        <ComboBox Name="Mtipus" Grid.Column="1" HorizontalAlignment="Left" Margin="240,138,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Mtipus_SelectionChanged">
+            <ComboBoxItem Content="Wenner-alfa"/>
+            <ComboBoxItem Content="Schlumberger"/>
+            <ComboBoxItem Content="Dipól-axiális"/>
         </ComboBox>
+        <Button x:Name="Szünet" Content="Szünet" Grid.Column="1" HorizontalAlignment="Left" Margin="156,625,0,0" VerticalAlignment="Top" Width="111" Height="45" IsEnabled="False" FontFamily="Dubai Medium" FontSize="18"/>
+        <GroupBox Grid.Column="1" HorizontalAlignment="Left" Height="157" Margin="50,312,0,0" VerticalAlignment="Top" Width="346">
+            <Label Content="Maximális lépésköz:" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" FontSize="14"/>
+        </GroupBox>
+        <Label Content="Maximális mérés szám:" HorizontalAlignment="Left" Margin="66,403,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="14"/>
+        <TextBox x:Name="maxLepes" HorizontalAlignment="Left" Height="23" Margin="240,352,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True"/>
+        <TextBox x:Name="maxMeres" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="240,409,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+
+
 
     </Grid>
 </Window>

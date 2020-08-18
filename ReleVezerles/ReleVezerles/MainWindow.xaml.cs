@@ -28,7 +28,11 @@ namespace ReleVezerles
         public static int helykozmax;
         public static int meresekszama;
 
-        static void wenneralfa(int szonda)
+        private bool eSelected = false;
+        private bool mSelected = false;
+
+
+        public void wenneralfa(int szonda)
         {
             /* MINTA
               
@@ -74,12 +78,13 @@ namespace ReleVezerles
                 Chelye = Bhelye+helykoz;
                 Dhelye = Chelye+helykoz;
             }
+            DisableButtons();
             MessageBox.Show("Werrner-Alfa, Kész");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax-1));
         }
 
-        static void Schlumberger(int szonda)
+        public void Schlumberger(int szonda)
         {
             /* MINTA
               
@@ -123,12 +128,13 @@ namespace ReleVezerles
                 Chelye = Bhelye + 1;
                 Dhelye = Chelye + helykoz;
             }
+            DisableButtons();
             MessageBox.Show("Schlumberger, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
         }
 
-        static void Dipolaxialis(int szonda)
+        public void Dipolaxialis(int szonda)
         {
             /* MINTA
               
@@ -172,6 +178,7 @@ namespace ReleVezerles
                 Chelye = Bhelye + helykoz;
                 Dhelye = Chelye + 1;
             }
+            DisableButtons();
             MessageBox.Show("Dipól-axiális, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
@@ -182,8 +189,11 @@ namespace ReleVezerles
         {
             if (Eszam.SelectedItem != null && Mtipus.SelectedItem!=null)
             {
-                elektrodakszama = int.Parse(Eszam.Text);
-                merestipus = Mtipus.Text;
+                elektrodakszama = int.Parse(Eszam.Text); //Eszam > elektrodaszám ComboBoxItem 
+                merestipus = Mtipus.Text; // Mtipus > Mérési típus ComboBoxItem
+
+                Szünet.IsEnabled = true;
+                Leallit.IsEnabled = true;
 
                 switch (merestipus)
                 {
@@ -200,15 +210,47 @@ namespace ReleVezerles
                         break;
                 }
             }
-            else
+        }
+
+
+        //Indítás gomb aktiválás
+        private void Eszam_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Eszam.SelectedItem != null)
             {
-                MessageBox.Show("Hiba!\n Valamelyik paraméter nincs beállítva!");
+                eSelected = true;
             }
+
+            if (mSelected == true)
+            {
+                Indito.IsEnabled = true;
+            }
+        }
+
+        private void Mtipus_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Mtipus.SelectedItem != null)
+            {
+                mSelected = true;
+            }
+
+            if (mSelected == true)
+            {
+                Indito.IsEnabled = true;
+            }
+        }
+
+        public void DisableButtons()
+        {
+            //lefutás utánn a szünet és leállítás gomb kikapcsolása
+            Szünet.IsEnabled = false;
+            Leallit.IsEnabled = false;
         }
 
         public MainWindow()
         {
             InitializeComponent();
         }
+
     }
 }
