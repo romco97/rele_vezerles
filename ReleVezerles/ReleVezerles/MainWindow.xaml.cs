@@ -25,6 +25,8 @@ namespace ReleVezerles
         // változók
         public static int elektrodakszama;
         public static string merestipus;
+        public static int helykozmax;
+        public static int meresekszama;
 
         static void wennerafla()
         {
@@ -50,24 +52,29 @@ namespace ReleVezerles
             int Chelye = 3;
             int Dhelye = 4;
             int helykoz = 1;
+            meresekszama = 0;
 
             while (Dhelye < szondadb+1) //mérés lezárása, helyköz léptetés
             {
                 while (Dhelye < szondadb+1) //sor lezárása, soron belüli léptetés
                 {
                     MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    meresekszama++;
                     Ahelye++;   // léptetünk soron belül
                     Bhelye++;
                     Chelye++;
                     Dhelye++;
                 }
                 helykoz++;
+                helykozmax = helykoz;
                 Ahelye = 1;
                 Bhelye = Ahelye+helykoz;
                 Chelye = Bhelye+helykoz;
                 Dhelye = Chelye+helykoz;
             }
             MessageBox.Show("Werrner-Alfa, Kész");
+            MessageBox.Show("Meresek száma: " + meresekszama);
+            MessageBox.Show("Max lépésköz: " + (helykozmax-1));
         }
 
         static void Schlumberger()
@@ -94,24 +101,29 @@ namespace ReleVezerles
             int Chelye = 3;
             int Dhelye = 4;
             int helykoz = 1;
+            meresekszama = 0;
 
             while (Dhelye < szondadb + 1) //mérés lezárása, helyköz léptetés
             {
                 while (Dhelye < szondadb + 1) //sor lezárása, soron belüli léptetés
                 {
                     MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    meresekszama++;
                     Ahelye++;   // léptetünk soron belül
                     Bhelye++;
                     Chelye++;
                     Dhelye++;
                 }
                 helykoz++;
+                helykozmax = helykoz;
                 Ahelye = 1;
                 Bhelye = Ahelye + helykoz;
                 Chelye = Bhelye + 1;
                 Dhelye = Chelye + helykoz;
             }
             MessageBox.Show("Schlumberger, KÉSZ");
+            MessageBox.Show("Meresek száma: " + meresekszama);
+            MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
         }
 
         static void Dipolaxialis()
@@ -138,31 +150,36 @@ namespace ReleVezerles
             int Chelye = 3;
             int Dhelye = 4;
             int helykoz = 1;
+            meresekszama = 0;
 
             while (Dhelye < szondadb + 1) //mérés lezárása, helyköz léptetés
             {
                 while (Dhelye < szondadb + 1) //sor lezárása, soron belüli léptetés
                 {
                     MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    meresekszama++;
                     Ahelye++;   // léptetünk soron belül
                     Bhelye++;
                     Chelye++;
                     Dhelye++;
                 }
                 helykoz++;
+                helykozmax = helykoz;
                 Ahelye = 1;
                 Bhelye = Ahelye + 1;
                 Chelye = Bhelye + helykoz;
                 Dhelye = Chelye + 1;
             }
             MessageBox.Show("Dipól-axiális, KÉSZ");
+            MessageBox.Show("Meresek száma: " + meresekszama);
+            MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
         }
 
         public MainWindow()
         {
-            /*wennerafla();
+            wennerafla();
             Schlumberger();
-            Dipolaxialis();*/
+            Dipolaxialis();
             InitializeComponent();
         }
     }
