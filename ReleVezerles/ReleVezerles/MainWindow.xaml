@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="960" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="57*"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Indítás" HorizontalAlignment="Left" Margin="50,625,0,0" VerticalAlignment="Top" Width="122" Height="45" Cursor="Hand" FontSize="18" FontFamily="Arial Black" Grid.Column="1"/>
+        <Button Content="Leállítás" HorizontalAlignment="Left" Margin="285,625,0,0" VerticalAlignment="Top" Width="122" Height="45" Cursor="Hand" FontSize="18" FontFamily="Arial Black" Grid.Column="1"/>
+        <GroupBox Grid.Column="1" Header="Paraméterek" HorizontalAlignment="Left" Height="152" Margin="50,40,0,0" VerticalAlignment="Top" Width="346"/>
+        <Label Content="Elektródák száma:" Grid.Column="1" HorizontalAlignment="Left" Margin="76,70,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Mérés típusa:" Grid.Column="1" HorizontalAlignment="Left" Margin="104,131,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="240,77,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="4" Tag="4"/>
+            <ComboBoxItem Content="8" Tag="8"/>
+            <ComboBoxItem Content="16" Tag="16"/>
+            <ComboBoxItem Content="32" Tag="32"/>
+            <ComboBoxItem Content="64" Tag="64"/>
+            <ComboBoxItem Content="128" Tag="128"/>
+            <ComboBoxItem Content="256" Tag="256"/>
+            <ComboBoxItem Content="512" Tag="512"/>
+            <ComboBoxItem Content="1028" Tag="1028"/>
+        </ComboBox>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Margin="240,138,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Wenner-alfa" Tag="1"/>
+            <ComboBoxItem Content="Schlumberger" Tag="2"/>
+            <ComboBoxItem Content="Dipól-axiális" Tag="3"/>
+        </ComboBox>
+
     </Grid>
 </Window>
