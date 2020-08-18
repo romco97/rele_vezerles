@@ -28,7 +28,7 @@ namespace ReleVezerles
         public static int helykozmax;
         public static int meresekszama;
 
-        static void wennerafla(int szonda)
+        static void wenneralfa(int szonda)
         {
             /* MINTA
               
@@ -188,7 +188,7 @@ namespace ReleVezerles
                 switch (merestipus)
                 {
                     case "Wenner-alfa":
-                        wennerafla(elektrodakszama);
+                        wenneralfa(elektrodakszama);
                         break;
 
                     case "Schlumberger":
@@ -208,9 +208,6 @@ namespace ReleVezerles
 
         public MainWindow()
         {
-            wennerafla();
-            Schlumberger();
-            Dipolaxialis();
             InitializeComponent();
         }
     }
