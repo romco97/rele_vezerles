@@ -28,7 +28,7 @@ namespace ReleVezerles
         public static int helykozmax;
         public static int meresekszama;
 
-        static void wennerafla()
+        static void wennerafla(int szonda)
         {
             /* MINTA
               
@@ -45,8 +45,10 @@ namespace ReleVezerles
                hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
                ha erre már nem képes akkor már nem mérünk tovább     */
 
+            
+
             //MEGVALÓSÍTÁS
-            int szondadb = 8;
+            int szondadb = szonda;
             int Ahelye = 1;
             int Bhelye = 2;
             int Chelye = 3;
@@ -77,7 +79,7 @@ namespace ReleVezerles
             MessageBox.Show("Max lépésköz: " + (helykozmax-1));
         }
 
-        static void Schlumberger()
+        static void Schlumberger(int szonda)
         {
             /* MINTA
               
@@ -95,7 +97,7 @@ namespace ReleVezerles
                ha erre már nem képes akkor már nem mérünk tovább     */
 
             //MEGVALÓSÍTÁS
-            int szondadb = 8;
+            int szondadb = szonda;
             int Ahelye = 1;
             int Bhelye = 2;
             int Chelye = 3;
@@ -126,7 +128,7 @@ namespace ReleVezerles
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
         }
 
-        static void Dipolaxialis()
+        static void Dipolaxialis(int szonda)
         {
             /* MINTA
               
@@ -144,7 +146,7 @@ namespace ReleVezerles
                ha erre már nem képes akkor már nem mérünk tovább     */
 
             //MEGVALÓSÍTÁS
-            int szondadb = 8;
+            int szondadb = szonda;
             int Ahelye = 1;
             int Bhelye = 2;
             int Chelye = 3;
@@ -173,6 +175,35 @@ namespace ReleVezerles
             MessageBox.Show("Dipól-axiális, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
+        }
+
+
+        public void Inditas(object sender, RoutedEventArgs e)
+        {
+            if (Eszam.SelectedItem != null && Mtipus.SelectedItem!=null)
+            {
+                elektrodakszama = int.Parse(Eszam.Text);
+                merestipus = Mtipus.Text;
+
+                switch (merestipus)
+                {
+                    case "Wenner-alfa":
+                        wennerafla(elektrodakszama);
+                        break;
+
+                    case "Schlumberger":
+                        Schlumberger(elektrodakszama);
+                        break;
+
+                    case "Dipól-axiális":
+                        Dipolaxialis(elektrodakszama);
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hiba!\n Valamelyik paraméter nincs beállítva!");
+            }
         }
 
         public MainWindow()

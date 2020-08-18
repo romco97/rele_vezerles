@@ -13,3 +13,18 @@ F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.
 F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csproj.CoreCompileInputs.cache
 F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.exe
 F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.pdb
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.exe.config
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.exe
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.pdb
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csprojAssemblyReference.cache
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\MainWindow.g.cs
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\App.g.cs
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles_MarkupCompile.cache
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles_MarkupCompile.lref
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\MainWindow.baml
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.g.resources
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.Properties.Resources.resources
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csproj.GenerateResource.cache
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csproj.CoreCompileInputs.cache
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.exe
+C:\Users\r4z0r\Documents\GitHub\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.pdb
