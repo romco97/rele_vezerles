@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -40,17 +41,128 @@ namespace ReleVezerles
                3. (lezárás) a mérés addig fut amíg képes rá, ez alatt azt értjük,
                hogy ha az A szonda első helyen áll, és a helyköz úgymond eléri azt a maximális számot,
                hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
-               ha erre már nem képes akkor már nem mérünk tovább     */ 
+               ha erre már nem képes akkor már nem mérünk tovább     */
 
             //MEGVALÓSÍTÁS
+            int szondadb = 8;
+            int Ahelye = 1;
+            int Bhelye = 2;
+            int Chelye = 3;
+            int Dhelye = 4;
+            int helykoz = 1;
 
-
+            while (Dhelye < szondadb+1) //mérés lezárása, helyköz léptetés
+            {
+                while (Dhelye < szondadb+1) //sor lezárása, soron belüli léptetés
+                {
+                    MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    Ahelye++;   // léptetünk soron belül
+                    Bhelye++;
+                    Chelye++;
+                    Dhelye++;
+                }
+                helykoz++;
+                Ahelye = 1;
+                Bhelye = Ahelye+helykoz;
+                Chelye = Bhelye+helykoz;
+                Dhelye = Chelye+helykoz;
+            }
+            MessageBox.Show("Werrner-Alfa, Kész");
         }
 
+        static void Schlumberger()
+        {
+            /* MINTA
+              
+               ABCD
+               A-BC-D
+               A--BC--D   */
+
+            /* TERVEZÉS
+               0. (előfeltétel) hány szonda van? (gombon lehet majd állitani ---> változó(szondadb))
+               1. (algoritmus) ABCD funkcionalitású szondák, addig mér amíg az algoritmus alapján a D nem lesz nagyobb a szondadb változónknál
+               2. (ciklus) amint nagyobb lenne a D szonda sorszáma mint a szondadb, akkor egy (helykoz) valtozó 1-el nől, és úgy fut le nullától
+               3. (lezárás) a mérés addig fut amíg képes rá, ez alatt azt értjük,
+               hogy ha az A szonda első helyen áll, és a helyköz úgymond eléri azt a maximális számot,
+               hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
+               ha erre már nem képes akkor már nem mérünk tovább     */
+
+            //MEGVALÓSÍTÁS
+            int szondadb = 8;
+            int Ahelye = 1;
+            int Bhelye = 2;
+            int Chelye = 3;
+            int Dhelye = 4;
+            int helykoz = 1;
+
+            while (Dhelye < szondadb + 1) //mérés lezárása, helyköz léptetés
+            {
+                while (Dhelye < szondadb + 1) //sor lezárása, soron belüli léptetés
+                {
+                    MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    Ahelye++;   // léptetünk soron belül
+                    Bhelye++;
+                    Chelye++;
+                    Dhelye++;
+                }
+                helykoz++;
+                Ahelye = 1;
+                Bhelye = Ahelye + helykoz;
+                Chelye = Bhelye + 1;
+                Dhelye = Chelye + helykoz;
+            }
+            MessageBox.Show("Schlumberger, KÉSZ");
+        }
+
+        static void Dipolaxialis()
+        {
+            /* MINTA
+              
+               ABCD
+               AB-CD
+               AB--CD   */
+
+            /* TERVEZÉS
+               0. (előfeltétel) hány szonda van? (gombon lehet majd állitani ---> változó(szondadb))
+               1. (algoritmus) ABCD funkcionalitású szondák, addig mér amíg az algoritmus alapján a D nem lesz nagyobb a szondadb változónknál
+               2. (ciklus) amint nagyobb lenne a D szonda sorszáma mint a szondadb, akkor egy (helykoz) valtozó 1-el nől, és úgy fut le nullától
+               3. (lezárás) a mérés addig fut amíg képes rá, ez alatt azt értjük,
+               hogy ha az A szonda első helyen áll, és a helyköz úgymond eléri azt a maximális számot,
+               hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
+               ha erre már nem képes akkor már nem mérünk tovább     */
+
+            //MEGVALÓSÍTÁS
+            int szondadb = 8;
+            int Ahelye = 1;
+            int Bhelye = 2;
+            int Chelye = 3;
+            int Dhelye = 4;
+            int helykoz = 1;
+
+            while (Dhelye < szondadb + 1) //mérés lezárása, helyköz léptetés
+            {
+                while (Dhelye < szondadb + 1) //sor lezárása, soron belüli léptetés
+                {
+                    MessageBox.Show("A: " + Ahelye + " B: " + Bhelye + " C: " + Chelye + " D: " + Dhelye);  //kiirjuk az adatokat
+                    Ahelye++;   // léptetünk soron belül
+                    Bhelye++;
+                    Chelye++;
+                    Dhelye++;
+                }
+                helykoz++;
+                Ahelye = 1;
+                Bhelye = Ahelye + 1;
+                Chelye = Bhelye + helykoz;
+                Dhelye = Chelye + 1;
+            }
+            MessageBox.Show("Dipól-axiális, KÉSZ");
+        }
 
         public MainWindow()
         {
-
+            /*wennerafla();
+            Schlumberger();
+            Dipolaxialis();*/
             InitializeComponent();
         }
     }
