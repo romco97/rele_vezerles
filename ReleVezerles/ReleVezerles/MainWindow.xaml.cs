@@ -40,7 +40,7 @@ namespace ReleVezerles
                3. (lezárás) a mérés addig fut amíg képes rá, ez alatt azt értjük,
                hogy ha az A szonda első helyen áll, és a helyköz úgymond eléri azt a maximális számot,
                hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
-               ha erre már nem képes akkor már nem mérünk tovább     */
+               ha erre már nem képes akkor már nem mérünk tovább     */ 
 
             //MEGVALÓSÍTÁS
 
