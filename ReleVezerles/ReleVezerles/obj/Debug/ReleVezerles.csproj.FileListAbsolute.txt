@@ -1,0 +1,15 @@
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.exe.config
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.exe
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\bin\Debug\ReleVezerles.pdb
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csprojAssemblyReference.cache
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\MainWindow.g.cs
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\App.g.cs
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles_MarkupCompile.cache
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles_MarkupCompile.lref
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\MainWindow.baml
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.g.resources
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.Properties.Resources.resources
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csproj.GenerateResource.cache
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.csproj.CoreCompileInputs.cache
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.exe
+F:\rele vezerles\rele_vezerles\ReleVezerles\ReleVezerles\obj\Debug\ReleVezerles.pdb
