@@ -27,18 +27,29 @@
             <ComboBoxItem Content="512" Tag="512"/>
             <ComboBoxItem Content="1028" Tag="1028"/>
         </ComboBox>
-        <ComboBox Name="Mtipus" Grid.Column="1" HorizontalAlignment="Left" Margin="240,138,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Mtipus_SelectionChanged">
+        <ComboBox Name="Mtipus" SelectedValuePath="Content" Grid.Column="1" HorizontalAlignment="Left" Margin="240,138,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Mtipus_SelectionChanged">
             <ComboBoxItem Content="Wenner-alfa"/>
             <ComboBoxItem Content="Schlumberger"/>
             <ComboBoxItem Content="Dipól-axiális"/>
+            <ComboBoxItem Content="Tetszőleges"/>
         </ComboBox>
         <Button x:Name="Szünet" Content="Szünet" Grid.Column="1" HorizontalAlignment="Left" Margin="156,625,0,0" VerticalAlignment="Top" Width="111" Height="45" IsEnabled="False" FontFamily="Dubai Medium" FontSize="18"/>
-        <GroupBox Grid.Column="1" HorizontalAlignment="Left" Height="157" Margin="50,312,0,0" VerticalAlignment="Top" Width="346">
-            <Label Content="Maximális lépésköz:" HorizontalAlignment="Left" Margin="25,37,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <GroupBox Grid.Column="1" HorizontalAlignment="Left" Height="157" Margin="50,403,0,0" VerticalAlignment="Top" Width="346">
+            <Label Content="Maximális lépésköz:" HorizontalAlignment="Left" Margin="30,94,0,0" VerticalAlignment="Top" FontSize="14"/>
         </GroupBox>
-        <Label Content="Maximális mérés szám:" HorizontalAlignment="Left" Margin="66,403,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="14"/>
-        <TextBox x:Name="maxLepes" HorizontalAlignment="Left" Height="23" Margin="240,352,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True"/>
-        <TextBox x:Name="maxMeres" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="240,409,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <Label Content="Maximális mérés szám:" HorizontalAlignment="Left" Margin="76,430,0,0" VerticalAlignment="Top" Grid.Column="1" FontSize="14"/>
+        <TextBox x:Name="maxLepes" HorizontalAlignment="Left" Height="23" Margin="240,430,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Column="1" IsReadOnly="True"/>
+        <TextBox x:Name="maxMeres" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="240,497,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <GroupBox x:Name="Tparam"  Grid.Column="1" Header="Tetszőleges paraméterek" HorizontalAlignment="Left" Height="165" Margin="50,212,0,0" VerticalAlignment="Top" Width="346"/>
+        <Label x:Name="TextA" Content="A" HorizontalAlignment="Left" Margin="76,241,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="TextM" Content="M" HorizontalAlignment="Left" Margin="221,241,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="TextN" Content="N" HorizontalAlignment="Left" Margin="76,309,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="TextB" Content="B" HorizontalAlignment="Left" Margin="225,309,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <TextBox x:Name="A" HorizontalAlignment="Left" Height="23" Margin="105,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Grid.Column="1"/>
+        <TextBox x:Name="M" HorizontalAlignment="Left" Height="23" Margin="259,245,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91" Grid.Column="1"/>
+        <TextBox x:Name="N" HorizontalAlignment="Left" Height="23" Margin="105,312,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91" Grid.Column="1"/>
+        <TextBox x:Name="B" HorizontalAlignment="Left" Height="23" Margin="259,313,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="91" Grid.Column="1"/>
+        
 
 
 

@@ -252,14 +252,23 @@ namespace ReleVezerles
 
         private void Mtipus_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (Mtipus.SelectedItem != null)
+            if (Mtipus.SelectedValue.ToString() != "Tetszőleges")
             {
-                mSelected = true;
-            }
+                if (Mtipus.SelectedItem != null)
+                {
+                    mSelected = true;
+                }
 
-            if (mSelected == true)
+                if (eSelected == true)
+                {
+                    Indito.IsEnabled = true;
+                }
+                ExtraPanel(false);
+            }
+            else
             {
-                Indito.IsEnabled = true;
+                //kiegészítő ablak megnyitás
+                ExtraPanel(true);
             }
         }
 
@@ -279,9 +288,39 @@ namespace ReleVezerles
             Indito.IsEnabled = false;
         }
 
+        public void ExtraPanel(bool status)
+        {
+            if (status == false)
+            {
+                Tparam.Visibility = Visibility.Hidden;
+                TextA.Visibility = Visibility.Hidden;
+                TextB.Visibility = Visibility.Hidden;
+                TextN.Visibility = Visibility.Hidden;
+                TextM.Visibility = Visibility.Hidden;
+                A.Visibility = Visibility.Hidden;
+                M.Visibility = Visibility.Hidden;
+                N.Visibility = Visibility.Hidden;
+                B.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                Tparam.Visibility = Visibility.Visible;
+                TextA.Visibility = Visibility.Visible;
+                TextB.Visibility = Visibility.Visible;
+                TextN.Visibility = Visibility.Visible;
+                TextM.Visibility = Visibility.Visible;
+                A.Visibility = Visibility.Visible;
+                M.Visibility = Visibility.Visible;
+                N.Visibility = Visibility.Visible;
+                B.Visibility = Visibility.Visible;
+            }
+
+
+        }
         public MainWindow()
         {
             InitializeComponent();
+            ExtraPanel(false);
         }
 
     }
