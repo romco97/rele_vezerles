@@ -79,6 +79,7 @@ namespace ReleVezerles
                 Dhelye = Chelye+helykoz;
             }
             DisableButtons();
+            ResetParameters();
             MessageBox.Show("Werrner-Alfa, Kész");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax-1));
@@ -129,6 +130,7 @@ namespace ReleVezerles
                 Dhelye = Chelye + helykoz;
             }
             DisableButtons();
+            ResetParameters();
             MessageBox.Show("Schlumberger, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
@@ -179,6 +181,7 @@ namespace ReleVezerles
                 Dhelye = Chelye + 1;
             }
             DisableButtons();
+            ResetParameters();
             MessageBox.Show("Dipól-axiális, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
@@ -245,6 +248,15 @@ namespace ReleVezerles
             //lefutás utánn a szünet és leállítás gomb kikapcsolása
             Szünet.IsEnabled = false;
             Leallit.IsEnabled = false;
+        }
+
+        public void ResetParameters()
+        {
+            Eszam.SelectedItem = null;
+            Mtipus.SelectedItem = null;
+            mSelected = false;
+            eSelected = false;
+            Indito.IsEnabled = false;
         }
 
         public MainWindow()
