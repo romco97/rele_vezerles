@@ -204,6 +204,11 @@ namespace ReleVezerles
 
             // MEGVALÓSÍTÁS
 
+            //HIBÁS--------------------------------------------------------------------HIBÁS-----------------------------------------------HIBÁS
+            if (int.Parse(A.Text) <= 0 && (int.Parse(A.Text) < elektrodakszama)) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
+            if (int.Parse(M.Text) <= 0 && (int.Parse(M.Text) < elektrodakszama && int.Parse(M.Text) > int.Parse(A.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
+            if (int.Parse(N.Text) <= 0 && (int.Parse(N.Text) < elektrodakszama && int.Parse(N.Text) > int.Parse(A.Text) && int.Parse(N.Text) > int.Parse(M.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
+            if (int.Parse(B.Text) <= 0 && (int.Parse(B.Text) < elektrodakszama && int.Parse(B.Text) > int.Parse(A.Text) && int.Parse(B.Text) > int.Parse(N.Text) && int.Parse(B.Text) > int.Parse(M.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
 
         }
 
@@ -230,6 +235,9 @@ namespace ReleVezerles
 
                     case "Dipól-axiális":
                         Dipolaxialis(elektrodakszama);
+                        break;
+                    case "Tetszőleges":
+                        tetszoleges1(elektrodakszama);
                         break;
                 }
             }
@@ -268,6 +276,8 @@ namespace ReleVezerles
             else
             {
                 //kiegészítő ablak megnyitás
+                //ITT A HIBA TE GECI
+                //mSelected = true;
                 ExtraPanel(true);
             }
         }
