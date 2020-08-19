@@ -187,6 +187,26 @@ namespace ReleVezerles
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
         }
 
+        public void tetszoleges1(int szonda)
+        {
+            /* MINTA
+               
+               a felhasználó adja meg
+            */
+
+            /* TERVEZÉS
+               
+                0. A felhasználó kiválasztja, hogy tetszőleges beállitásokkal akar dolgozni
+                1. A felhasználó adhatja meg, hogy hol helyezkedjenek el a szondák
+                2. Megkell vizsgálni, hogy megfelelő sorrendben helyezkedjenek el a szondák egymáshoz képest
+                3. Mivel ez a verzió nem ciklikusan fog végrehajtódni, hanem csak egyszer, ezért nincs szükség a kiiratási panel teljes felhasználására
+            */
+
+            // MEGVALÓSÍTÁS
+
+
+        }
+
 
         public void Inditas(object sender, RoutedEventArgs e)
         {
