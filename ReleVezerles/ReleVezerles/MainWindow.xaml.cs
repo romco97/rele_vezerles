@@ -79,7 +79,7 @@ namespace ReleVezerles
                 Dhelye = Chelye+helykoz;
             }
             DisableButtons();
-            ResetParameters();
+            //ResetParameters();
             MessageBox.Show("Werrner-Alfa, Kész");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax-1));
@@ -130,7 +130,7 @@ namespace ReleVezerles
                 Dhelye = Chelye + helykoz;
             }
             DisableButtons();
-            ResetParameters();
+            //ResetParameters();
             MessageBox.Show("Schlumberger, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
@@ -181,7 +181,7 @@ namespace ReleVezerles
                 Dhelye = Chelye + 1;
             }
             DisableButtons();
-            ResetParameters();
+            //ResetParameters();
             MessageBox.Show("Dipól-axiális, KÉSZ");
             MessageBox.Show("Meresek száma: " + meresekszama);
             MessageBox.Show("Max lépésköz: " + (helykozmax - 1));
@@ -257,7 +257,6 @@ namespace ReleVezerles
                 Indito.IsEnabled = true;
             }
         }
-
         private void Mtipus_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (Mtipus.SelectedValue.ToString() != "Tetszőleges")
@@ -276,9 +275,16 @@ namespace ReleVezerles
             else
             {
                 //kiegészítő ablak megnyitás
-                //ITT A HIBA TE GECI
-                //mSelected = true;
+                ExtraPanelReset();
                 ExtraPanel(true);
+
+                mSelected = true;
+
+                if (eSelected == true)
+                {
+                    Indito.IsEnabled = true;
+                }
+
             }
         }
 
@@ -289,6 +295,7 @@ namespace ReleVezerles
             Leallit.IsEnabled = false;
         }
 
+        //HIBA-------------------------HIBA > Mtipus_SelectionChanged > Fő IF logika bugot okoz, más módszer kell.
         public void ResetParameters()
         {
             Eszam.SelectedItem = null;
@@ -324,8 +331,16 @@ namespace ReleVezerles
                 N.Visibility = Visibility.Visible;
                 B.Visibility = Visibility.Visible;
             }
+        }
 
+        public void ExtraPanelReset()
+        {
+            //Az értékek nullázása 
 
+            A.Text = null;
+            B.Text = null;
+            N.Text = null;
+            M.Text = null;
         }
         public MainWindow()
         {
