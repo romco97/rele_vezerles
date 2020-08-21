@@ -205,10 +205,10 @@ namespace ReleVezerles
             // MEGVALÓSÍTÁS
 
             //HIBÁS--------------------------------------------------------------------HIBÁS-----------------------------------------------HIBÁS
-            if (int.Parse(A.Text) <= 0 && (int.Parse(A.Text) < elektrodakszama)) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
-            if (int.Parse(M.Text) <= 0 && (int.Parse(M.Text) < elektrodakszama && int.Parse(M.Text) > int.Parse(A.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
-            if (int.Parse(N.Text) <= 0 && (int.Parse(N.Text) < elektrodakszama && int.Parse(N.Text) > int.Parse(A.Text) && int.Parse(N.Text) > int.Parse(M.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
-            if (int.Parse(B.Text) <= 0 && (int.Parse(B.Text) < elektrodakszama && int.Parse(B.Text) > int.Parse(A.Text) && int.Parse(B.Text) > int.Parse(N.Text) && int.Parse(B.Text) > int.Parse(M.Text))) MessageBox.Show("Kérlek olyan értéket adj meg ami 1 és " + elektrodakszama + " közé esik!");
+            if (int.Parse(A.Text) <= 0 && (int.Parse(A.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
+            if (int.Parse(M.Text) <= 0 && (int.Parse(M.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
+            if (int.Parse(N.Text) <= 0 && (int.Parse(N.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
+            if (int.Parse(B.Text) <= 0 && (int.Parse(B.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
 
         }
 
@@ -275,6 +275,7 @@ namespace ReleVezerles
             else
             {
                 //kiegészítő ablak megnyitás
+                MessageBox.Show("Amikor az adatokat adja meg, kérem legyen tekintettel arra, hogy a szondák egy bizonyos szabály alapján követik egymást: A M N B");
                 ExtraPanelReset();
                 ExtraPanel(true);
 
