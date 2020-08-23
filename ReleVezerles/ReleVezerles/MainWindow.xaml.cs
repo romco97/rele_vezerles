@@ -49,9 +49,7 @@ namespace ReleVezerles
                hogy a D szonda már nem tudna úgy elhelyezkedni hogy a sorszáma ne legyen nagyobb a szonda db-nál,
                ha erre már nem képes akkor már nem mérünk tovább     */
 
-            
-
-            //MEGVALÓSÍTÁS
+            // MEGVALÓSÍTÁS
             int szondadb = szonda;
             int Ahelye = 1;
             int Bhelye = 2;
@@ -204,12 +202,26 @@ namespace ReleVezerles
 
             // MEGVALÓSÍTÁS
 
-            //HIBÁS--------------------------------------------------------------------HIBÁS-----------------------------------------------HIBÁS
+
+            // megfelelő intervallum ellenőrzése
+            /*
+                    !   !   !   !   !   !   !   !   !   !   !   !   !
+                    az elektrodakszama változó valamiért nem működik
+                    !   !   !   !   !   !   !   !   !   !   !   !   !
+             */
             if (int.Parse(A.Text) <= 0 && (int.Parse(A.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
             if (int.Parse(M.Text) <= 0 && (int.Parse(M.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
             if (int.Parse(N.Text) <= 0 && (int.Parse(N.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
             if (int.Parse(B.Text) <= 0 && (int.Parse(B.Text) < elektrodakszama)) MessageBox.Show("1-től " + elektrodakszama + "-ig adhatsz meg számot!");
 
+            // egymáshoz képest jók-e
+            if (int.Parse(M.Text) <= int.Parse(A.Text)) MessageBox.Show("Az 'M' szondának az értéke nem lehet kisebb vagy egyenlő az 'A' szonda értékével, kérlek adj meg egy számot ami " + A.Text + "-nél nagyobb!");
+            if (int.Parse(N.Text) <= int.Parse(M.Text)) MessageBox.Show("Az 'N' szondának az értéke nem lehet kisebb vagy egyenlő az 'M' szonda értékével, kérlek adj meg egy számot ami " + M.Text + "-nél nagyobb!");
+            if (int.Parse(B.Text) <= int.Parse(N.Text)) MessageBox.Show("Az 'B' szondának az értéke nem lehet kisebb vagy egyenlő az 'N' szonda értékével, kérlek adj meg egy számot ami " + N.Text + "-nél nagyobb!");
+           
+            DisableButtons();
+            //ResetParameters();
+            MessageBox.Show("Tetszőleges mérés, Kész");
         }
 
 
